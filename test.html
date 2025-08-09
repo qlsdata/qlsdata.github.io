@@ -1,9 +1,20 @@
 <html>
 <head>
 <script type="text/javascript">
+const imageUrl = "https://publicdomainarchive.com/img/c-domain-images-free-stock-photos-high-quality-resolution-downloads-public-domain-archive-6-1000x664_mur6xaossozvmf6vabfg67.jpg"; 
+const imgElement = document.getElementById("image");
+
+fetch(imageUrl)
+.then(response => response.blob()) 
+.then(blob => {
+    let imgURL = URL.createObjectURL(blob);
+    imgElement.src = imgURL;
+})
+    .catch(error => console.error("Error fetching image:", error));
+
 </script>
 </head>
 <body>
-<img src="https://publicdomainarchive.com/img/c-domain-images-free-stock-photos-high-quality-resolution-downloads-public-domain-archive-6-1000x664_mur6xaossozvmf6vabfg67.jpg"></img>
+<img src=""></img>
 </body>
 </html>
